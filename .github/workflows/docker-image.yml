@@ -7,12 +7,10 @@ on:
     branches: [ "master" ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
-     steps:
+    steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -21,6 +19,7 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t akshay77888/node:latest .
-      
+
       - name: Push Docker image to DockerHub
-        run: docker push akshay7788e/node:latest
+        run: docker push akshay77888/node:latest
+
