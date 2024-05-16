@@ -1,0 +1,6 @@
+image:
+  repository: akshay77888/node
+  tag: latest
+service:
+  port: 3004
+
