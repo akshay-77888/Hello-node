@@ -1,0 +1,29 @@
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "k8s-node"
+  namespace: "default"
+  labels:
+    app: "k8s-node"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "k8s-node"
+  template:
+    metadata:
+      labels:
+        app: "k8s-node"
+    spec:
+      containers:
+        - name: "c0h"
+          image: "akshay77888/node:latest"
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+---

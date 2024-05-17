@@ -1,0 +1,27 @@
+apiVersion: v2
+name: my-chart
+description: A Helm chart for deploying k8s-node service and deployment
+version: 0.1.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,21 +1,10 @@
-# Use the official Node.js image as the base image
-FROM node:alpine
+FROM node:10.15.1-alpine as builder
 
-# Set the working directory inside the container
-WORKDIR /app
+WORKDIR /opt/src
 
-# Copy package.json and package-lock.json files to the container
-COPY package*.json ./
+COPY package.json .
+COPY package-lock.json .
+COPY index.js .
+CMD ["npm", "start"]
 
-# Install dependencies
-RUN npm install
-
-# Copy the rest of the application code to the container
-COPY . .
-
-# Expose port 3000
-EXPOSE 3004
-
-# Command to run the application
-CMD ["node", "index.js"]
 
